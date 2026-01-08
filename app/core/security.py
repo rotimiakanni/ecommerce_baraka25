@@ -29,7 +29,6 @@ def create_access_token(email: str, expires_delta: Optional[timedelta] = None) -
         payload, settings.SECRET_KEY, algorithm=settings.ALGORITHM)
     return token
 
-
 def decode_access_token(token: str) -> dict:
     try:
         payload = jwt.decode(
