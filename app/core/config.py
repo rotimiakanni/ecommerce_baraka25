@@ -8,6 +8,9 @@ class Settings(BaseSettings):
 
     # DB
     DATABASE_URL: str
+    DB_NAME: str = ""
+    DB_USER: str = ""
+    DB_PASSWORD: str = ""
 
     # Security
     ACCESS_TOKEN_EXPIRE_MINUTES: int

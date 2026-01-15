@@ -30,7 +30,7 @@ def list_products(
 ):
     products = (
         db.query(Product)
-        .filter(Product.is_active == True)
+        .filter(Product.is_active == True)  # noqa: E712
         .offset(skip)
         .limit(limit)
         .all()

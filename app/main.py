@@ -16,8 +16,8 @@ sentry_sdk.init(
 app = FastAPI(title="FastAPI E-commerce")
 
 
-app.include_router(auth.router, prefix=settings.API_V1_STR, tags=["auth"])
-app.include_router(product.router, prefix=settings.API_V1_STR, tags=["products"])
+app.include_router(auth.router, prefix=f"{settings.API_V1_STR}/auth", tags=["auth"])
+app.include_router(product.router, prefix=f"{settings.API_V1_STR}/products", tags=["products"])
 
 
 @app.get("/")

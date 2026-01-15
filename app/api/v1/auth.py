@@ -5,8 +5,6 @@ from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 
 from app.api.deps import get_db
-from app.api.deps import get_current_active_user
-from app.models.user import User
 from app.schemas.user import UserCreate, UserRead
 from app.services.user import UserService
 from app.schemas.auth import Token
